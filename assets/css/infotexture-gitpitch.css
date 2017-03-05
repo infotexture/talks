@@ -59,22 +59,23 @@ html {
 .reveal strong,
 .reveal blockquote em,
 .reveal th {
-  font-weight: 600;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .reveal h5,
 .reveal h6 {
-  font-weight: 700;
+  font-weight: 700; /* bold */
 }
 
 /* Headings */
 
 .reveal h1 {
+  border-bottom: 3px solid #eee;
   margin-top: calc((60 / 23) * 1em); /* 60px @23px */
   margin-bottom: calc((60 / 23) * 1em); /* 60px @23px */
   font-size: calc((23 / 18) * 1em); /* 1.2778em = 23px @ font-size: 18px */
   line-height: calc(30 / 23); /* 1.304 = 30px @ font-size: 23px */
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
