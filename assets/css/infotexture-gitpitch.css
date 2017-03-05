@@ -1,0 +1,688 @@
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #fcfcfc;
+  background-color: #fcfcfc; }
+
+html {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "Myriad Pro", "Keyboard", sans-serif;
+  font-weight: 300; /* SemiLight weight for non-Retina (@1x) */
+  line-height: calc(30 / 18); /* 1.6667 = 30px @ font-size: 18px */
+}
+
+/* Normal weight for Retina… */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), print {
+  html {
+    font-weight: 400;
+  }
+}
+
+/* …but only until 414px breakpoint on OS X */
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 414px) and (min-device-width: 1152px) , (min-resolution: 192dpi) and (min-width: 414px) and (min-device-width: 1152px) {
+  html {
+    font-weight: 300;
+  }
+}
+
+.text-with-background {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
+    color: #fff;
+}
+
+.reveal {
+  font-family: "Myriad Pro";
+  font-size: 36px;
+  font-weight: normal;
+  color: #006; }
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+  text-shadow: none; }
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit;
+  text-align: left;
+}
+
+/* Emphasis */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal strong,
+.reveal blockquote em,
+.reveal th {
+  font-weight: 600;
+}
+
+.reveal h5,
+.reveal h6 {
+  font-weight: 700;
+}
+
+/* Headings */
+
+.reveal h1 {
+  margin-top: calc((60 / 23) * 1em); /* 60px @23px */
+  margin-bottom: calc((60 / 23) * 1em); /* 60px @23px */
+  font-size: calc((23 / 18) * 1em); /* 1.2778em = 23px @ font-size: 18px */
+  line-height: calc(30 / 23); /* 1.304 = 30px @ font-size: 23px */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reveal h2 {
+  color: #999; /* infotexture */
+  margin-top: calc((60 / 21) * 1em); /* 60px @21px */
+  margin-bottom: calc((30 / 18) * 1em); /* 30px @21px */
+  font-size: calc((21 / 18) * 1em); /* 1.1667em = 21px @ font-size: 18px */
+  line-height: calc(30 / 21); /* 1.4286 = 30px @ font-size: 21px */
+}
+
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin-top: calc((30 / 18) * 1em);
+  font-size: 1em;
+}
+
+.reveal h3,
+.reveal h4,
+.reveal h5 {
+  margin-bottom: 0;
+}
+
+.reveal h3,
+.reveal h4 {
+  line-height: calc(30 / 18); /* 1.6667 = 30px @ font-size: 18px */
+}
+
+.reveal h4 {
+  font-style: italic;
+}
+
+.reveal h5,
+.reveal h6 {
+  line-height: normal; /* To avoid SC baseline being 1-2px lower in Safari */
+  font-family: "NittiSCiA", "Keyboard", sans-serif;
+  text-transform: lowercase;
+}
+
+/* Display h6 as run-in */
+.reveal h6 {
+  float: left;
+  margin: 0 0.5em 0 0; /* 9px @ font-size: 18px */
+}
+
+  /* Clear all siblings after floated h6… */
+.reveal h6 ~ * {
+  clear: both;
+}
+
+  /* …except immediately following paragraph */
+.reveal h6 + .reveal p {
+  clear: none;
+}
+/* Subheading adjustments */
+
+.reveal h1 + .reveal h1 {
+  margin-top: calc((45 / 23) * -1em);
+}
+
+.reveal h1 + .reveal h2 {
+  margin-top: calc((45 / 21) * -1em);
+}
+
+.reveal h2 + .reveal h1 {
+  margin-top: calc((15 / 23) * -1em);
+}
+
+.reveal h2 + .reveal h2 {
+  margin-top: calc((15 / 21) * -1em);
+}
+
+:-webkit-any(.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6) + :-webkit-any(.reveal h3, .reveal h4, .reveal h5, .reveal h6),
+body > .reveal h6:first-child {
+  margin-top: 0;
+}
+
+/* Vertical margins */
+.reveal p,
+.reveal ol,
+.reveal ul,
+.reveal dl,
+.reveal figure,
+.reveal blockquote,
+.reveal pre,
+.reveal table {
+  margin: calc((30 / 18) * 1em) auto 0;
+}
+
+/* Override vertical margin between headers and block-level elements */
+:-webkit-any(.reveal h3, .reveal h4, .reveal h5) + :-webkit-any(.reveal p, .reveal ol, .reveal ul, .reveal dl, .reveal figure, .reveal blockquote, .reveal pre, .reveal table),
+:-webkit-any(.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5) + .reveal h6 + *,
+.reveal hr + .reveal h6 {
+  margin-top: 0;
+}
+
+/* Lists */
+/* Use custom bullet for unordered lists */
+.reveal ul {
+  list-style: none;
+}
+
+.reveal ul > .reveal li:before {
+  content: "• ";
+  float: left; /* Take out of flow to avoid changing left edge alignment or pushing child paragraph down */
+  margin-left: calc((20 / 18) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
+}
+
+/* Indent ordered lists in blockquotes */
+.reveal blockquote ul,
+.reveal blockquote ol {
+  margin-left: calc((40 / 18) * -1em); /* -40px when width = 1080px */
+}
+
+/* Blockquotes */
+.reveal blockquote {
+  color: #999; /* infotexture */
+  margin-left: calc((16 / 18) * -1em); /* 0.8889em = 16px when font-size: 18px */
+  margin-right: calc((16 / 18) * -1em); /* 0.8889em = 16px when font-size: 18px */
+  padding-left: calc((40 / 18) * 1em); /* 2.2222em = 40px when font-size: 18px */
+  padding-right: calc((40 / 18) * 1em); /* 2.2222em = 40px when font-size: 18px */
+  font-style: italic;
+}
+
+.reveal blockquote em strong,
+.reveal blockquote strong em {
+  font-weight: 700;
+}
+
+/* Task Lists */
+
+/* Task Lists
+   Left padding based on 40px default */
+
+/* Position ordinal counters so 1-9 left-align with left content edge. Subsequent counters will begin in gutter. */
+ol .task-list-item {
+  margin-left: -0.6667rem; /* ~-10px @ font-size: 15px */
+  padding-left: 0.6667rem; /* ~10px @ font-size: 15px */
+}
+
+/* Hide default bullets for unordered task lists. */
+ul .task-list-item {
+  list-style-type: none;
+}
+
+/* Hide gen-content bullets for unordered task lists. */
+ul .task-list-item:before {
+  display: none;
+}
+
+.task-list-item-checkbox {
+  float: left; /* Removes from flow in case of paragraph list items */
+  width: 1.6rem; /* Same as p line-height (changing width/height affects svg size) */
+  height: 1.6rem; /* Same as width */
+  margin: 0 0 0 -1.6rem; /* 0s to overwrite user agent styles */
+  border: none; /* Otherwise iPhone draws a border */
+  font-size: 75%; /* Required to overwrite user agent styles, set to same as p */
+  background-image: url('box.svg');
+  background-repeat: no-repeat;
+  background-position: 40% 40%; /* x=roughly align with bullets and between ordinal and text, y=4px down to roughly align to baseline. */
+  background-size: 50% 50%; /* Desired size 12px / 21px line-height for Preview */
+  background-color: transparent;
+  -webkit-print-color-adjust: exact; /* Prevents from hiding when printed */
+  -webkit-appearance: none; /* Disables system checkbox image */
+  opacity: 1.0; /* Otherwise they are 0.4 on iPhone, where it applies disabled effect even with above */
+}
+
+.task-list-item-checkbox:checked {
+  background-image: url('check.svg');
+}
+
+/* Checkbox color in Night Mode (=text color) */
+.night-mode .task-list-item-checkbox {
+  background-image: url('box-night-mode-ios.svg');
+}
+
+.night-mode .task-list-item-checkbox:checked {
+  background-image: url('check-night-mode-ios.svg');
+}
+
+/* OS X color */
+@media screen and (min-device-width: 1152px) {
+  .night-mode .task-list-item-checkbox {
+    background-image: url('box-night-mode-osx.svg');
+  }
+
+  .night-mode .task-list-item-checkbox:checked {
+    background-image: url('check-night-mode-osx.svg');
+  }
+}
+
+
+.task-list-item-checkbox {
+  width: 1.6667em; /* line-height */
+  height: 1.6667em; /* same as width */
+  background-position: 60% 48%; /* tweak position */
+}
+
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  word-wrap: break-word;
+}
+
+.center-headings :-webkit-any(h1, h2, h3, h4, h5) {
+  text-align: center;
+}
+
+/* Emphasis */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal strong,
+.reveal blockquote em,
+.reveal th {
+  font-weight: 600;
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.6; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q,
+.reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #009;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #006;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: black; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.reveal section figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #1a1a1a;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #1a1a1a; }
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #1a1a1a; }
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #1a1a1a; }
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #1a1a1a; }
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #4d4d4d; }
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #4d4d4d; }
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #4d4d4d; }
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #4d4d4d; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #1a1a1a;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+@media print {
+
+  {
+    -webkit-print-color-adjust: exact;
+}
+
+body {
+    margin: 0 auto !important;
+    border: 0;
+    padding: 0;
+    float: none !important;
+    overflow: visible;
+      background: #ffffff;
+  background-color: #ffffff;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+    display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+    overflow: hidden !important;
+    font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+    visibility: visible;
+    position: static;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: visible;
+    margin: auto;
+}
+.reveal {
+    width: auto !important;
+    height: auto !important;
+    overflow: hidden !important;
+}
+.reveal .slides {
+    position: static;
+    width: 100%;
+    height: auto;
+
+    left: auto;
+    top: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible;
+    display: block;
+
+    -webkit-perspective: none;
+       -moz-perspective: none;
+        -ms-perspective: none;
+            perspective: none;
+
+    -webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+       -moz-perspective-origin: 50% 50%;
+        -ms-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+    page-break-before: always !important;
+
+    visibility: visible !important;
+    position: relative !important;
+    display: block !important;
+    position: relative !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    min-height: 1px;
+
+    opacity: 1 !important;
+
+    -webkit-transform-style: flat !important;
+       -moz-transform-style: flat !important;
+        -ms-transform-style: flat !important;
+            transform-style: flat !important;
+
+    -webkit-transform: none !important;
+       -moz-transform: none !important;
+        -ms-transform: none !important;
+            transform: none !important;
+}
+
+.reveal section.stack {
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-before: avoid !important;
+    height: auto !important;
+    min-height: auto !important;
+}
+
+.reveal img {
+    box-shadow: none;
+}
+
+.reveal .roll {
+    overflow: visible;
+    line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  background-color: #111111;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+    display: block;
+    width: 100%;
+    max-height: none;
+    left: auto;
+    top: auto;
+    z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+    display: block;
+    position: absolute;
+    font-size: 14px;
+}
+}

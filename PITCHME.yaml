@@ -1,2 +1,4 @@
 horz-delim : ---
 vert-delim : ___
+theme-override : assets/css/infotexture-gitpitch.css
+
