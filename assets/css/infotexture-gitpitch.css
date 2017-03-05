@@ -78,6 +78,8 @@ html {
 
 .reveal h1 {
   border-bottom: 3px solid #eee;
+  color: #006; /* infotexture */
+  font-family: "Myriad Pro", "Source Sans Pro", Helvetica, sans-serif;
   margin-top: calc((60 / 23) * 1em); /* 60px @23px */
   margin-bottom: calc((60 / 23) * 1em); /* 60px @23px */
   font-size: calc((23 / 18) * 1em); /* 1.2778em = 23px @ font-size: 18px */
@@ -87,6 +89,7 @@ html {
 
 .reveal h2 {
   color: #999; /* infotexture */
+  font-family: "Myriad Pro", "Source Sans Pro", Helvetica, sans-serif;
   margin-top: calc((60 / 21) * 1em); /* 60px @21px */
   margin-bottom: calc((30 / 18) * 1em); /* 30px @21px */
   font-size: calc((21 / 18) * 1em); /* 1.1667em = 21px @ font-size: 18px */
