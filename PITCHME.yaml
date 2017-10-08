@@ -4,5 +4,4 @@ vert-delim : ___
 theme-override : https://github.com/infotexture/reveal.js/raw/custom/css/theme/infotexture.css
 logo : assets/infotexture-wordmark-gray_151x48.png
 
-footnote : "<a style='text-decoration:none; color: #eee;' href='#/2'>© 2017 infotexture</a>"
-vertical-center : false
+footnote : "<a style='text-decoration:none; color: #AAA;' href='#/2'>DITA-OT Day · Berlin · October 29, 2017 © infotexture</a>"
