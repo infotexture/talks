@@ -4,6 +4,14 @@
 ##### <span style="font-family:Helvetica Neue; font-weight:bold">A <span style="color:#e49436">Git</span>Pitch Feature Tour</span>
 
 ---
+
+# Agenda
+
+<i class="fa fa-sitemap fa-5x pull-right fa-muted"></i>
+
+---  
+
+
 ## Slideshow Theme Switcher
 <span style="font-size:0.6em; color:gray">Available bottom-left of screen.</span> |
 <span style="font-size:0.6em; color:gray">Start switching themes right now!</span>
