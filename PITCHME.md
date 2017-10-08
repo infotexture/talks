@@ -5,9 +5,10 @@
 
 ---
 
+<i class="fa fa-sitemap fa-5x pull-right muted"></i>
+
 # Agenda
 
-<i class="fa fa-sitemap fa-5x pull-right fa-muted"></i>
 
 ---  
 
