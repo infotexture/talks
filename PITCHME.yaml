@@ -1,5 +1,5 @@
 horz-delim : ---
 vert-delim : ___
 theme-override : https://github.com/infotexture/reveal.js/raw/custom/css/theme/infotexture.css
-logo : https://cdn.rawgit.com/infotexture/gitpitch-test/4c6e4867a4f2d063afd364f507aac814c95c1c0d/assets/infotexture-wordmark-blue.svg
+logo : https://cdn.rawgit.com/infotexture/gitpitch-test/df71f45048092a26b5fbab8edbde6043fad2ee14/assets/infotexture-wordmark-gray-48pt.svg
 
