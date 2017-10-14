@@ -1,17 +1,12 @@
-# DITA-OT Docs Development(s)
-
-## DITA-OT documentation update
-
-##### infotexture
-###### Information Architecture & Content Strategy
+# DITA-OT Docs Developments
 
 #### Roger W. Fienhold Sheen
 
 ---  
 
-# Agenda
-
 <i class="fa fa-sitemap fa-5x pull-right muted"></i>
+
+# Agenda
 
 <!-- TOC max1 -->
 
@@ -21,13 +16,13 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 
 ---  
 
-# What's New? — dita-ot.org!
+## What's New? — dita-ot.org!
 
 <figure><img src="images/dita-ot-website-2-4.png" border="1" /></figure>
 
 ___  
 
-## Recent Enhancements
+### Recent Enhancements
 
 <!-- Create Vizzlo fishbone timeline of OT releases -->
 <!-- https://vizzlo.com/create/fishbone-timeline-chart -->
@@ -41,9 +36,11 @@ ___
 
 <figure><img src="images/dita-ot-website-keyboard-shortcuts.png" border="1" /></figure>
 
+[1]: http://www.dita-ot.org/dev/
+
 ---  
 
-# Docs Changes in 2.3
+## Docs Changes in 2.3
 
 <i class="fa fa-book fa-5x pull-right muted"></i>
 
@@ -62,9 +59,9 @@ ___
 
 ---  
 
-# What's More in 2.4
-
 <i class="fa fa-book fa-5x pull-right muted"></i>
+
+## What's More in 2.4
 
 * New [Extension points by plug-in][13] generated from installed plug-ins
 * New [DITA features in the documentation][14] topic
@@ -74,20 +71,20 @@ ___
 
 ---  
 
-# Progress Report — Last Year's Ideas
-
 <i class="fa fa-check fa-5x pull-right muted"></i>
+
+## Progress Report — Last Year's Ideas
 
 ___  
 
-## Additional Content
+### Additional Content
 
 * ~~Migration topics — Migrating customizations to 2.0, 2.1, 2.2~~
 * ~~Setting DITA-OT parameters with `.properties` files~~
 
 ___  
 
-## Enhancements
+### Enhancements
 
 * ~~Generate documentation for all supported extension points~~
 * ~~Apply DITA 1.3 XML mention domain tags~~
@@ -95,9 +92,9 @@ ___
 
 ---  
 
-# Still To Do — What's Next?
-
 <i class="fa fa-lightbulb fa-5x pull-right muted"></i>
+
+## Still To Do — What's Next?
 
 * Update sample build scripts — Add examples on building docs
 * Modularize CSS & extend coverage
@@ -113,9 +110,9 @@ ___
 
 ---  
 
-# Suggestions
-
 <i class="fa fa-comments fa-5x pull-right muted"></i>
+
+## Suggestions
 
 Visit <http://www.dita-ot.org/dev/> for the latest docs.
 
@@ -124,7 +121,7 @@ If you'd like to help, review the [Contribution Guidelines][16].
 
 ___  
 
-## Create an Issue
+### Create an Issue
 
 If you find a bug — _and you don’t know how to fix it_, [create an issue][17] to request changes.
 
@@ -134,11 +131,11 @@ _or — even better…_
 
 ---  
 
-# How to Help
-
 <i class="fa fa-code fa-5x pull-right muted"></i>
 
-## Create a Pull Request
+## How to Help
+
+### Create a Pull Request
 
 If you know how to fix the issue yourself, that's great!  
 
@@ -151,7 +148,6 @@ Here's what to do:
 
 > Or — if that all sounds too complicated — just click the **Edit this page** link.
 
-[1]: http://www.dita-ot.org/dev/
 [2]: https://github.com/dita-ot/docs/ 
 [3]: http://www.dita-ot.org/dev/user-guide/build-using-dita-properties-file.html
 [4]: http://www.dita-ot.org/dev/user-guide/build-migrating-ant-to-dita.html
