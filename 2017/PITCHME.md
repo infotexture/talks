@@ -7,10 +7,11 @@
 
 #### Roger W. Fienhold Sheen
 
+---  
 
 # Agenda
 
-<i class="icon-sitemap icon-5x pull-right icon-muted"></i>
+<i class="fa fa-sitemap fa-5x pull-right muted"></i>
 
 <!-- TOC max1 -->
 
@@ -18,9 +19,13 @@
 This talk provides an overview of DITA-OT documentation usage metrics and highlights recent changes to the docs and ideas for future improvements. We’ll close with room for suggestions from the community and a call for contributions with information on the browser-based workflow for suggesting changes.
 -->
 
+---  
+
 # What's New? — dita-ot.org!
 
 <figure><img src="images/dita-ot-website-2-4.png" border="1" /></figure>
+
+___  
 
 ## Recent Enhancements
 
@@ -36,9 +41,11 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 
 <figure><img src="images/dita-ot-website-keyboard-shortcuts.png" border="1" /></figure>
 
+---  
+
 # Docs Changes in 2.3
 
-<i class="icon-book icon-5x pull-right icon-muted"></i>
+<i class="fa fa-book fa-5x pull-right muted"></i>
 
 * New _User Guide_ topics on publishing via the `dita` command:
     + [Using a properties file][3]
@@ -53,9 +60,11 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
         - [Resources for custom PDF plug-ins][11]
     + [Migrating customizations][12]
 
+---  
+
 # What's More in 2.4
 
-<i class="icon-book icon-5x pull-right icon-muted"></i>
+<i class="fa fa-book fa-5x pull-right muted"></i>
 
 * New [Extension points by plug-in][13] generated from installed plug-ins
 * New [DITA features in the documentation][14] topic
@@ -63,14 +72,20 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 
 <figure><img src="images/dita-ot-generated-extension-points.png" border="1" /></figure>
 
+---  
+
 # Progress Report — Last Year's Ideas
 
-<i class="icon-check icon-5x pull-right icon-muted"></i>
+<i class="fa fa-check fa-5x pull-right muted"></i>
+
+___  
 
 ## Additional Content
 
 * ~~Migration topics — Migrating customizations to 2.0, 2.1, 2.2~~
 * ~~Setting DITA-OT parameters with `.properties` files~~
+
+___  
 
 ## Enhancements
 
@@ -78,9 +93,11 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 * ~~Apply DITA 1.3 XML mention domain tags~~
 * ~~Automated dev docs builds~~
 
+---  
+
 # Still To Do — What's Next?
 
-<i class="icon-lightbulb icon-5x pull-right icon-muted"></i>
+<i class="fa fa-lightbulb fa-5x pull-right muted"></i>
 
 * Update sample build scripts — Add examples on building docs
 * Modularize CSS & extend coverage
@@ -94,14 +111,18 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
     * _Troubleshooting_
 * Automated testing
 
+---  
+
 # Suggestions
 
-<i class="icon-comments icon-5x pull-right icon-muted"></i>
+<i class="fa fa-comments fa-5x pull-right muted"></i>
 
 Visit <http://www.dita-ot.org/dev/> for the latest docs.
 
 We welcome contributions to the DITA-OT documentation.  
 If you'd like to help, review the [Contribution Guidelines][16].
+
+___  
 
 ## Create an Issue
 
@@ -111,10 +132,11 @@ Before you do that, [review the open issues][18] to make sure it hasn't already 
 
 _or — even better…_
 
+---  
 
 # How to Help
 
-<i class="icon-code icon-5x pull-right icon-muted"></i>
+<i class="fa fa-code fa-5x pull-right muted"></i>
 
 ## Create a Pull Request
 
