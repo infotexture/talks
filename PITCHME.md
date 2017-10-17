@@ -1,407 +1,249 @@
+# Marking Down DITA
+
+### _Lightweight authoring & publishing with Markdown & DITA Open Toolkit_
+
+#### Roger W. Fienhold Sheen
+
 ---
 
-## The Kitchen Sink
-##### <span style="font-family:Helvetica Neue; font-weight:bold">A <span style="color:#e49436">Git</span>Pitch Feature Tour</span>
-
----
-
-<i class="fa fa-sitemap fa-5x pull-right muted"></i>
+<i class="fa fa-sitemap fa-4x pull-right muted"></i>
 
 # Agenda
 
+<!-- 
+This talk introduces Jarno Elovirta’s DITA-OT Markdown plugins, which extend the DITA Open Toolkit so you can use Markdown files directly in topic references and export existing DITA content in Markdown format for use in other publishing systems.
 
----  
+This makes it easier for people to contribute content to DITA publications, enables mobile authoring workflows, facilitates review processes with less technical audiences and expands the range of publishing options to workflows based on Markdown.
+-->
 
+<!-- MarkdownTOC autolink="true" bracket="round" depth="1" -->
 
-## Slideshow Theme Switcher
-<span style="font-size:0.6em; color:gray">Available bottom-left of screen.</span> |
-<span style="font-size:0.6em; color:gray">Start switching themes right now!</span>
+- [Markdown – Web Writing Simplified](#markdown-%E2%80%93-web-writing-simplified)
+- [Using Markdown with DITA Open Toolkit](#using-markdown-with-dita-open-toolkit)
+- [What aboutLightweight DITA?](#what-aboutlightweight-dita)
+- [Benefits & Use Cases](#benefits--use-cases)
 
----
-
-## Tip!
-For best viewing experience press **F** key to go fullscreen.
-
----
-
-## Markdown Slides
-<span style="font-size:0.6em; color:gray">Press Down key for details.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Slide-Markdown" target="_blank">GitPitch Wiki</a> for details.</span>
-
-
-___
-
-#### Use GitHub Flavored Markdown
-#### For Slide Content Creation
-
-<br>
-
-The same tool you use to create project **READMEs** and **Wikis** for your Git repos.
+<!-- /MarkdownTOC -->
 
 ---
 
-## Code Slides
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Code-Slides" target="_blank">GitPitch Wiki</a> for details.</span>
+## Markdown – <br/>Web Writing Simplified
+
+1. a plain text formatting syntax; _and_ 
+2. software … that converts the plain text … to HTML
+
+> The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. 
+
+Note:
+Created in 2004 by John Gruber & Aaron Swartz, [Markdown][4] is: 
+
+So while Markdown was originally designed to make it easier to write for the web without worrying about angle brackets and tags, it’s proving useful for more than just websites…
+
+[4]:    http://daringfireball.net/projects/markdown/
 
 ___
 
-#### Use Markdown Code Blocks
+<i class="fa fa-mobile-phone fa-4x pull-right muted"></i>
 
-<br>
+### Mobile Authoring & Lightweight Content
 
-And enjoy code syntax highlighting for dozens of languages powered by <a target="_blank" href="highlight.js](https://highlightjs.org">highlight.js</a>.
+* The rise of mobile devices sparked renewed interest in lightweight content formats and ease of use as authors began looking for ways to take their writing _(and their tools)_ with them on the go.
 
-___
+* Authors can capture notes with a smartphone on the go, flush out the draft back at their desk, and proofread the final result on a tablet later without copying-and-pasting or converting to other file formats along the way. 
 
-```JavaScript
-// JavaScript Code Block
-
-$('button').click(function(){
-    $('h1, h2, p').addClass('blue')
-    $('div').removeClass('important')
-    $('h3').toggleClass('error')
-    $('#foo').attr('alt', 'Lorem Ipsum')
-});
-```
+Since writing in Markdown encourages authors to focus on structure rather than presentation, it’s a good match for structured authoring scenarios in which  minimal markup is sufficient. 
 
 ___
 
-```Scala
-// Scala Code Block
+### Markdown Meets DITA
 
-HashMap params = HashMap(n -> 10, mean -> 5)
+* The DITA learning curve presents a barrier to adoption.
 
-// Define executable for R stats#rnorm function call.
-OCPUTask task = OCPU.R()
-                    .pkg("stats")
-                    .function("rnorm")
-                    .input(params.asJava)
-                    .library()
-```
+* But why ask people to struggle with XML or learn a new tool before they can provide input to our publications?
+
+_Shouldn’t we just let people write ‽_
+
+_ — Let the tools figure out what to do._
 
 ___
 
-```Go
-// Go Code Block
+### Plaintext panacea?
 
-package main
+Several proposals rely on Markdown to simplifly authoring:
 
-import "fmt"
+* **DITA Glass** — _oXygen's URL-based on-the-fly conversion_
+* **Lightweight DITA** — _more on that in a moment…_
 
-func swap(x, y string) (string, string) {
-    return y, x
-}
+Some use `h2d` to convert to HTML as an interim format. 
 
-func main() {
-    a, b := swap("hello", "world")
-    fmt.Println(a, b)
-}
-```
+This limits vocabulary to the original Markdown syntax — _but now there’s another way…_
 
 ---
 
-## GIST Slides
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/GIST-Slides" target="_blank">GitPitch Wiki</a> for details.</span>
+## Using Markdown with DITA Open Toolkit
+
+<i class="fa fa-puzzle-piece fa-4x pull-left muted"></i>
+
+Jarno Elovirta’s [DITA-OT Markdown][11] plugin extends the toolkit so you can use Markdown files as topics and convert DITA to Markdown. 
+
+Install it in DITA-OT 2.2 – 2.5 with the `dita` command:
+
+    dita -install https://github.com/jelovirt/dita-ot-markdown/releases/ ↩
+      download/1.3.0/com.elovirta.dita.markdown_1.3.0.zip
+
+[11]:   https://github.com/jelovirt/dita-ot-markdown
 
 ___
 
-#### GitHub GIST
-#### Building Blocks For Any Presentation
+### Adding Markdown topics
 
-<br>
+To add a Markdown topic, set the `@format` attribute to `markdown` so the plugin will recognize the source file as Markdown and convert it to DITA:
 
-Enjoy 100% reusable code snippets, excellent syntax highlighting, code indentation and styling. 
+    <map>
+      <topicref href="markdown-dita-topic.md" format="markdown"/>
+    </map>
 
-___?gist=8da53731fd54bab9d5c6
+___
 
-___?gist=28ee3d19ddef9d51b15adbdfe9ed48da
+### Publishing to Markdown
+
+The plugin not only _reads_ Markdown, it also provides new output formats to convert DITA content to Markdown.
+
+    dita --input=userguide.ditamap --format=markdown
+
+* Use `markdown` to publish Markdown DITA files.
+
+* For [GitHub Flavored Markdown](https://help.github.com/categories/writing-on-github/): `markdown_github`.
+
+* To publish via [GitBook](https://www.gitbook.com), use `markdown_gitbook`.
 
 ---
 
-## Image Slides
-## [ Inline ]
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Image-Slides" target="_blank">GitPitch Wiki</a> for details.</span>
+### A Myriad of Markdowns
+
+* The original Markdown syntax supports basic HTML
+* A variety of extensions support additional applications
+  - [MultiMarkdown][15], or _MMD_  
+      _(tables, footnotes, and citations)_
+  - [Github Flavored Markdown][16], or _GFM_, 
+      _(strikethrough, fenced code blocks and syntax highlighting)_
+  - [CommonMark][17] provides least-common-denominator syntax that should work well everywhere
+
+[15]: http://fletcherpenney.net/multimarkdown/
+[16]: https://help.github.com/articles/github-flavored-markdown/
+[17]: http://commonmark.org/
 
 ___
 
-#### Make A Visual Statement
+### The “Markdown DITA” Format
 
-<br>
+The **DITA-OT Markdown** plugin introduced a new Markdown flavor called _“Markdown DITA”_, a representation of DITA content in Markdown.
 
-Use inline images to lend a *visual punch* to your slideshow presentations.
-
-
-___
-
-<span style="color:gray; font-size:0.7em">Inline Image at <b>Absolute URL</b></span>
-
-![Image-Absolute](https://d1z75bzl1vljy2.cloudfront.net/kitchen-sink/octocat-privateinvestocat.jpg)
-
-<span style="color:gray; font-size: 0.5em;">the <b>Private Investocat</b> by <a href="https://github.com/jeejkang" target="_blank">jeejkang</a></span>
-
+_Markdown DITA_ builds on CommonMark, using standard Markdown constructs or those from other established Markdown flavors to represent DITA content. 
 
 ___
 
-<span style="color:gray; font-size:0.7em">Inline Image at GitHub Repo <b>Relative URL</b></span>
+### Keys As Reference Links
 
-![Image-Absolute](assets/octocat-de-los-muertos.jpg)
+<i class="fa fa-key fa-4x pull-right muted"></i>
 
-<span style="color:gray; font-size:0.5em">the <b>Octocat-De-Los-Muertos</b> by <a href="https://github.com/cameronmcefee" target="_blank">cameronmcefee</a></span>
-
+The shortcut reference link syntax is used to represent DITA key references, so you can just write `[key]` to create a cross-reference like `<xref keyref="key"/>`.
 
 ___
 
-<span style="color:gray; font-size:0.7em"><b>Animated GIFs</b> Work Too!</span>
+### Definition lists
 
-![Image-Relative](https://d1z75bzl1vljy2.cloudfront.net/kitchen-sink/octocat-daftpunkocat.gif)
+Definition lists use the [PHP Markdown Extra][19] format, so 
 
-<span style="color:gray; font-size:0.5em">the <b>Daftpunktocat-Guy</b> by <a href="https://github.com/jeejkang" target="_blank">jeejkang</a></span>
+    Term
+    :   Definition.
+
+becomes a DITA definition list:
+
+    <dl>
+      <delentry>
+        <dt>Term</dt>
+        <dd>Definition.</dd>
+      </delentry>
+    </dl>
+
+[19]:   http://michelf.com/projects/php-markdown/extra/#def-list
+
+___
+
+### Syntax Extensions
+
+<i class="fa fa-plus-sign-alt icon-4x pull-left muted"></i>
+
+* Tables use the [MultiMarkdown][20] table extension format
+* Pandoc’s [header attributes][21] can be used to define `id` or `outputclass` attributes
+
+So `# Topic title { #carrot .juice}` becomes:
+
+    <topic id="carrot" outputclass="juice">
+      <title>Topic title</title>
+
+[20]:   http://fletcherpenney.net/multimarkdown/
+[21]:   http://johnmacfarlane.net/pandoc/demo/example9/pandocs-markdown.html#extension-header_attributes
+
+___
+
+### DITA-Specific Extensions
+
+Where necessary, _Markdown DITA_ establishes a few conventions of its own to support additional DITA features:
+
+* Specify the information type of the generated DITA topic with a header attribute like `{.task}`
+* Generate `<section>` and `<example>` elements with the `{.section}` and `{.example}` attributes.
+
+The plugin’s [syntax reference][24] provides an overview of the supported constructs  and illustrates how DITA’s XML structures are represented in _Markdown DITA_. 
+
+[24]:   https://github.com/jelovirt/dita-ot-markdown/wiki/Syntax-reference
 
 ---
 
-## Image Slides
-## [ Background ]
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Image-Slides#background" target="_blank">GitPitch Wiki</a> for details.</span>
-
-___
-
-#### Make A Bold Visual Statement
-
-<br>
-
-Use high-resolution background images for maximum impact.
-
-___?image=https://d1z75bzl1vljy2.cloudfront.net/kitchen-sink/victory.jpg
-
-___?image=https://d1z75bzl1vljy2.cloudfront.net/kitchen-sink/127.jpg
-
+### _But that was all available<br/>two years ago…_
 
 ---
 
-## Video Slides
-## [ Inline ]
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Video-Slides" target="_blank">GitPitch Wiki</a> for details.</span>
+## What about<br/>Lightweight DITA?
 
 ___
 
-#### Bring Your Presentations Alive
-
-<br>
-
-Embed *YouTube*, *Vimeo*, *MP4* and *WebM* inline on any slide.
-
-___
-
-![YouTube Video](https://www.youtube.com/embed/dNJdJIwCF_Y)
-
-___
-
-![Vimeo Video](https://player.vimeo.com/video/125471012)
-
-___
-
-![MP4 Video](http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4)
-
+_(coming soon to a toolkit near you…)_
 
 ---
 
-## Video Slides
-## [ Background ]
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Video-Slides#background" target="_blank">GitPitch Wiki</a> for details.</span>
+## Benefits & Use Cases
 
-___
+<i class="fa fa-lightbulb fa-4x pull-right muted"></i>
 
-#### Maximize The Viewer Experience
-
-<br>
-
-Go fullscreen with *MP4* and *WebM* videos.
-
-___?video=http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
+* Markdown becomes a first-class citizen 
+* Makes it easier to contribute to DITA publications
+* Facilitates review processes with less technical audiences 
+* Feed DITA into Markdown-based publishing systems 
 
 ---
 
-## Math Notation Slides
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Math-Notation-Slides" target="_blank">GitPitch Wiki</a> for details.</span>
+### Workflow Considerations
 
-___
-
-
-#### Beautiful Math Rendered Beautifully
-
-<br>
-
-Use *TeX*, *LaTeX* and *MathML* markup powered by <a target="_blank" href="https://www.mathjax.org/">MathJax</a>.
-
-___
-
-`$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$`
-
-___
-
-`\begin{align}
-\dot{x} & = \sigma(y-x) \\
-\dot{y} & = \rho x - y - xz \\
-\dot{z} & = -\beta z + xy
-\end{align}`
-
-___
-
-##### The Cauchy-Schwarz Inequality
-
-`\[
-\left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
- \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-\]`
-
-___
-
-##### The probability of getting \(k\) heads when flipping \(n\) coins is:
-
-`\[P(E) = {n \choose k} p^k (1-p)^{ n-k} \]`
-
-___
-
-##### In-line Mathematics
-
-This expression `\(\sqrt{3x-1}+(1+x)^2\)` is an example of an inline equation.
+1. **Avoid roundtripping.**
+2. **Simpler content stays Markdown.**  
+    Simple content authored collaboratively over multiple versions is kept in Markdown, extended with _Markdown DITA_ conventions and combined as necessary with more complex content maintained in DITA XML.
+3. **Convert complex content to DITA & keep it there.**  
+    One-off contributions use Markdown as raw material and enriched with conditional processing attributes, conkeyrefs or other more complex semantics.
 
 ---
 
-## Slide Fragments
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Fragment-Slides" target="_blank">GitPitch Wiki</a> for details.</span>
+### Resources
 
-___
+* <http://daringfireball.net/projects/markdown/>
+* <https://github.com/jelovirt/dita-ot-markdown/>
+* <http://infotexture.net/2015/04/dita-ot-markdown-plugin/>
 
-#### Reveal Slide Concepts Piecemeal
+⁂
 
-<br>
+<!-- 
+![][image-1]
 
-Step through slide content in sequence to slowly reveal the bigger picture.
-
-___
-
-- Java
-- Groovy     <!-- .element: class="fragment" -->
-- Kotlin     <!-- .element: class="fragment" -->
-- Scala     <!-- .element: class="fragment" -->
-- The JVM rocks! <!-- .element: class="fragment" -->
-
-___
-
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>25</td>
-  </tr>
-  <tr class="fragment">
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-  <tr class="fragment">
-    <td>John</td>
-    <td>Doe</td>
-    <td>43</td>
-  </tr>
-</table>
-
----
-## <span style="text-transform: none">PITCHME.yaml</span> Settings
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Slideshow-Settings" target="_blank">GitPitch Wiki</a> for details.</span>
-
-___
-
-#### Stamp Your Own Look and Feel
-
-<br>
-
-Set a default theme, custom logo, custom css, background image, and preferred code syntax highlighting style.
-
-___
-
-#### Customize Slideshow Behavior
-
-<br>
-
-Enable auto-slide with custom slide intervals, presentation looping, and RTL flow.
-
-
----
-## Slideshow Keyboard Controls
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Slideshow-Fullscreen-Mode" target="_blank">GitPitch Wiki</a> for details.</span>
-
-___
-
-#### Try Out These Great Features Now!
-
-<br>
-
-| Mode | On Key | Off Key |
-| ---- | :------: | :--------: |
-| Fullscreen | F |  Esc |
-| Overview | O |  O |
-| Blackout | B |  B |
-| Help | ? |  Esc |
-
-
----
-
-## GitPitch Social
-<span style="font-size:0.6em; color:gray">Press Down key for examples.</span> |
-<span style="font-size:0.6em; color:gray">See <a href="https://github.com/gitpitch/gitpitch/wiki/Slideshow-GitHub-Badge" target="_blank">GitPitch Wiki</a> for details.</span>
-
-___
-
-#### Slideshows Designed For Sharing
-
-<br>
-
-- View any slideshow at its public URL
-- [Promote](https://github.com/gitpitch/gitpitch/wiki/Slideshow-GitHub-Badge) any slideshow using a GitHub badge
-- [Embed](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Embedding) any slideshow within a blog or website
-- [Share](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Sharing) any slideshow on Twitter, LinkedIn, etc
-- [Print](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Printing) any slideshow as a PDF document
-- [Download and present](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Offline) any slideshow offline
-
----
-
-## GO FOR IT.
-## JUST ADD <span style="color:#e49436; text-transform: none">PITCHME.md</span> ;)
----
-
-# Heading 1
-
-Let's test a few things from https://github.com/hakimel/reveal.js#markdown
-
-## Heading 2
-
-### Heading 3
-
-Progressive bullet disclosure:
-
-- Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
-- Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
-
----
-
-# Slide backgrounds
-
-<!-- .slide: data-background="#ff0000" -->
-Markdown content
+[image-1]:  file:///Users/rofish/Documents/Work/Websites/graphics/markdown-dita_800.png
+ -->
