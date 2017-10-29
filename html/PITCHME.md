@@ -29,7 +29,13 @@ This talk will outline the process, using the DITA-OT project website at dita-ot
 
 ## Default HTML5 output
 
+
+---
+
 ## DITA-OT project website
+
+
+---
 
 ## Bundling CSS & adding metadata
 
@@ -54,6 +60,9 @@ Adding CSS & `<meta>` elements to the `<head>` of each HTML page
 ```
 @[5-7](Add meta elements)
 @[10-11](Add Bootstrap CSS)
+
+
+---
 
 ## Adding classes to generated HTML
 
