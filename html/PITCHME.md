@@ -6,11 +6,15 @@
 
 ---
 
-<i class="fa fa-quote fa-5x pull-left muted"></i>
+<i class="fa fa-quote-left fa-5x pull-left muted"></i>
 
 Web developers often use CSS frameworks, HTML5 boilerplate or component libraries like Bootstrap or Foundation to quickly build robust, responsive sites. 
 
-With custom HTML plug-ins, DITA-OT can be extended to produce HTML5 output that makes use of these common templates so that generated documents can build on existing front-end solutions.
+---
+
+<i class="fa fa-quote-left fa-5x pull-left muted"></i>
+
+With custom HTML plug-ins, DITA-OT can produce HTML5 output that uses these common templates so that generated documents can build on existing front-end solutions.
 
 ---
 
