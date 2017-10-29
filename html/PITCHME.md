@@ -14,7 +14,7 @@ Web developers often use CSS frameworks, HTML5 boilerplate or component librarie
 
 <i class="fa fa-quote-left fa-5x pull-left muted"></i>
 
-With custom HTML plug-ins, DITA-OT can produce HTML5 output that uses these common templates so that generated documents can build on existing front-end solutions.
+With custom HTML plug-ins, DITA-OT can produce HTML5 output that uses these  templates so that generated documents can build on existing front-end solutions.
 
 ---
 
