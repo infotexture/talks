@@ -2,7 +2,7 @@
 
 ## Developments
 
-#### Roger W. Fienhold Sheen [@infotexture](https://twitter.com/infotexture)
+#### Roger Sheen [@infotexture](https://twitter.com/infotexture)
 
 ---
 
@@ -152,9 +152,7 @@ _or — even better…_
 
 ### Create a Pull Request
 
-If you know how to fix the issue yourself, that's great!  
-
-Here's what to do:
+If you know how to fix the issue yourself, here's what to do:
 
 1. [Fork the repository][19],
 2. [Create a new branch][20],
