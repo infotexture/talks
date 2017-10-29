@@ -1,4 +1,4 @@
-# Bootstrapping DITA
+## Bootstrapping DITA
 
 ### _Customizing HTML output for modern web frameworks_
 
