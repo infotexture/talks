@@ -20,6 +20,7 @@ This talk will outline the process, using the DITA-OT project website at dita-ot
 
 - [Default HTML5 output](#default-html5-output)
 - [DITA-OT project website](#dita-ot-project-website)
+- [DITA-OT site plug-in](#dita-ot-site-plug-in)
 - [Adding CSS & metadata](#adding-css--metadata)
 - [Adding menu & classes](#adding-menu--classes)
 - [Styling navigation](#styling-navigation)
@@ -35,6 +36,32 @@ This talk will outline the process, using the DITA-OT project website at dita-ot
 
 ## DITA-OT project website
 
+* The DITA-OT project website is published via [GitHub pages][1] to [dita-ot.org][3]. 
+
+* The website is maintained in DITA, [Markdown][6] and HTML, versioned in Git and updated by pushing commits to the repository at [github.com/dita-ot/dita-ot.github.io][4].
+
+* GitHub pages is powered by [Jekyll][5], an open source tool like DITA-OT that   transforms files in one format with variables and templates, and generates output.
+
+[1]:  https://pages.github.com
+[2]:  http://dita-ot.github.io
+[3]:  http://www.dita-ot.org
+[4]:  https://github.com/dita-ot/dita-ot.github.io
+[5]:  http://jekyllrb.com "Jekyll • Simple, blog-aware, static sites"
+[6]:  http://daringfireball.net/projects/markdown/
+
+---
+
+## DITA-OT site plug-in
+
+The DITA-OT site plug-in is available on GitHub:
+
+<https://github.com/dita-ot/org.dita-ot.html>
+
+### Why not just use this?
+
+* It contains code specific to the DITA-OT project
+* It requires Jekyll
+* Based on older HTML5 code
 
 ---
 
