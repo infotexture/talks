@@ -1,2 +1,3 @@
-# gitpitch-test
-Testing Markdown Presentations via https://gitpitch.com
+# infotexture talks
+
+Markdown Presentations via https://gitpitch.com
