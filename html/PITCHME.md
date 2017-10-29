@@ -59,6 +59,10 @@ The DITA-OT site plug-in is available on GitHub:
 
 ---
 
+### _So let's just start from scratch…_
+
+---
+
 ## Adding CSS & metadata
 
 Customizing the `chapterHead` template mode:
