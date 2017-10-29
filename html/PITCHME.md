@@ -51,7 +51,7 @@ The DITA-OT site plug-in is available on GitHub:
 
 <https://github.com/dita-ot/org.dita-ot.html>
 
-### Why not just use this?
+### Why not just use this? <!-- .element: class="fragment" -->
 
 * Contains code specific to the DITA-OT project <!-- .element: class="fragment" -->
 * It requires Jekyll <!-- .element: class="fragment" -->
