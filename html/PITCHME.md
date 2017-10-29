@@ -18,8 +18,7 @@ This talk will outline the process, using the DITA-OT project website at dita-ot
 
 <!-- MarkdownTOC autolink="true" bracket="round" depth="1" -->
 
-- [Default HTML5 output](#default-html5-output)
-- [DITA-OT project website](#dita-ot-project-website)
+- [DITA-OT website](#dita-ot-website)
 - [DITA-OT site plug-in](#dita-ot-site-plug-in)
 - [Adding CSS & metadata](#adding-css--metadata)
 - [Adding menu & classes](#adding-menu--classes)
@@ -29,16 +28,11 @@ This talk will outline the process, using the DITA-OT project website at dita-ot
 
 ---
 
-## Default HTML5 output
+## DITA-OT website
 
+* Published via [GitHub pages][1] to [dita-ot.org][3]. 
 
----
-
-## DITA-OT project website
-
-* The DITA-OT project website is published via [GitHub pages][1] to [dita-ot.org][3]. 
-
-* The website is maintained in DITA, [Markdown][6] and HTML, versioned in Git and updated by pushing commits to the repository at [github.com/dita-ot/dita-ot.github.io][4].
+* The website is maintained in DITA, [Markdown][6] and HTML, versioned in Git and updated by pushing commits to [github.com/dita-ot/dita-ot.github.io][4].
 
 * GitHub pages is powered by [Jekyll][5], an open source tool like DITA-OT that   transforms files in one format with variables and templates, and generates output.
 
@@ -59,9 +53,9 @@ The DITA-OT site plug-in is available on GitHub:
 
 ### Why not just use this?
 
-* It contains code specific to the DITA-OT project
-* It requires Jekyll
-* Based on older HTML5 code
+* Contains code specific to the DITA-OT project <!-- .element: class="fragment" -->
+* It requires Jekyll <!-- .element: class="fragment" -->
+* Based on older HTML5 code <!-- .element: class="fragment" -->
 
 ---
 
