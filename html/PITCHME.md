@@ -20,8 +20,9 @@ This talk will outline the process, using the DITA-OT project website at dita-ot
 
 - [Default HTML5 output](#default-html5-output)
 - [DITA-OT project website](#dita-ot-project-website)
-- [Bundling CSS & adding metadata](#bundling-css--adding-metadata)
-- [Adding classes to generated HTML](#adding-classes-to-generated-html)
+- [Adding CSS & metadata](#adding-css--metadata)
+- [Adding menu & classes to page body](#adding-menu--classes-to-page-body)
+- [Styling navigation](#styling-navigation)
 
 <!-- /MarkdownTOC -->
 
@@ -37,9 +38,9 @@ This talk will outline the process, using the DITA-OT project website at dita-ot
 
 ---
 
-## Bundling CSS & adding metadata
+## Adding CSS & metadata
 
-Adding CSS & `<meta>` elements to the `<head>` of each HTML page
+Customizing the `chapterHead` template mode:
 
 ```xml
 <xsl:template match="*" mode="chapterHead">
@@ -53,17 +54,61 @@ Adding CSS & `<meta>` elements to the `<head>` of each HTML page
     <!-- […] -->
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet"/>
-    <xsl:call-template name="gen-user-styles" />  <!-- include user's XSL style element and content here -->
-    <xsl:call-template name="processHDF"/>        <!-- Add user HDF file, if specified -->
+    <!-- Continue with DITA-OT defaults -->
   </head>
 </xsl:template>
 ```
 @[5-7](Add meta elements)
 @[10-11](Add Bootstrap CSS)
 
+---
+
+## Adding menu & classes to page body
+
+Customizing the `chapterBody` template mode:
+
+```xml
+  <xsl:template match="*" mode="chapterBody">
+    <body>
+      <!-- Here there be defaults… -->
+      <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <!-- Your menu here… -->
+          </div>
+        </div>
+      </div>
+      <main id="content" class="col-md-9 container" role="main">
+        <xsl:apply-templates select="." mode="addContentToHtmlBodyElement"/>
+      </main>
+      <xsl:apply-templates select="." mode="addFooterToHtmlBodyElement"/>
+    </body>
+  </xsl:template>
+```
+@[4-5](Add class attributes & additional containers)
+@[6-8](Add menu to header)
 
 ---
 
-## Adding classes to generated HTML
+## Styling navigation
 
+Customizing the `gen-user-sidetoc` template mode:
+
+```xml
+  <xsl:template match="*" mode="gen-user-sidetoc">
+    <xsl:if test="$nav-toc = ('partial', 'full')">
+      <nav class="col-md-3" role="toc">
+        <div class="well well-sm">
+          <ul class="bs-docs-sidenav">
+            <xsl:choose>
+              <!-- Here there be defaults… -->
+            </xsl:choose>
+          </ul>
+        </div>
+      </nav>
+    </xsl:if>
+  </xsl:template>
+```
+@[3-5](Add nav classes)
+@[6-8](Selection logic for full/partial ToC unchanged)
 
