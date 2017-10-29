@@ -27,15 +27,48 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 
 ## Doing the Numbers
 
-Recent usage metrics
+___
 
-* Top 10 pages by title
-* Content drilldown by version
-* Home page charts: sessions by country, device, 123 DAU, 800 WAU, 3K MAU
-* Last year's Christmas bump
+### Recent usage metrics
+
+Active users since DITA-OT Day last year:
+
+* ~ 3000 Monthly <!-- .element: class="fragment" -->
+* ~ 846 Weekly   <!-- .element: class="fragment" -->
+* ~ 54 Daily     <!-- .element: class="fragment" -->
+
+___ 
+
+### Content version demand
+
+1. `1.8` ~ 19%    <!-- .element: class="fragment" -->
+2. `dev` ~ 12%    <!-- .element: class="fragment" -->
+3. `2.0` ~ 11%    <!-- .element: class="fragment" -->
+4. `2.4` ~ 6%     <!-- .element: class="fragment" -->
+5. `2.2` ~ 6%     <!-- .element: class="fragment" -->
+6. `2.5` ~ 4%     <!-- .element: class="fragment" -->
+7. `2.3` ~ 3%     <!-- .element: class="fragment" -->
+8. `2.1` ~ 2%     <!-- .element: class="fragment" -->
+
+___
+
+### Platform distribution
+
+#### By device
+
+1. 88% on desktop
+2. 10% on mobile
+3. 2% on tablets
+
+#### Operating systems
+
+1. 71% on Windows
+2. 12% on macOS
+3. 7% on iOS
+4. 5% on Linux
+5. 3% on Android
 
 ---
-
 
 ## What's New?
 
@@ -52,8 +85,6 @@ ___
     * Topic finder — press <kbd>t</kbd> to filter topics by title
     * Search — press <kbd>s</kbd> to focus the search field
     * Help – press <kbd>?</kbd> to show shortcuts
-
-<figure><img src="images/dita-ot-website-keyboard-shortcuts.png" border="1" /></figure>
 
 [1]: http://www.dita-ot.org/dev/
 [2]: https://github.com/dita-ot/docs/ 
@@ -83,10 +114,6 @@ ___
     - Generating Markdown output      <!-- .element: class="fragment" -->
 * New topic on Lightweight DITA       <!-- .element: class="fragment" -->
 * New topic on normalized DITA output <!-- .element: class="fragment" -->
-
----  
-
-<i class="fa fa-check fa-5x pull-right muted"></i>
 
 
 ---  
