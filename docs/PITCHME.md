@@ -41,14 +41,14 @@ ___
 
 ### Content version demand
 
-1. `1.8` ~ 19%    <!-- .element: class="fragment" -->
-2. `dev` ~ 12%    <!-- .element: class="fragment" -->
-3. `2.0` ~ 11%    <!-- .element: class="fragment" -->
-4. `2.4` ~ 6%     <!-- .element: class="fragment" -->
-5. `2.2` ~ 6%     <!-- .element: class="fragment" -->
-6. `2.5` ~ 4%     <!-- .element: class="fragment" -->
-7. `2.3` ~ 3%     <!-- .element: class="fragment" -->
-8. `2.1` ~ 2%     <!-- .element: class="fragment" -->
+1. **1.8** ~ 19%    <!-- .element: class="fragment" -->
+2. **dev** ~ 12%    <!-- .element: class="fragment" -->
+3. **2.0** ~ 11%    <!-- .element: class="fragment" -->
+4. **2.4** ~ 6%     <!-- .element: class="fragment" -->
+5. **2.2** ~ 6%     <!-- .element: class="fragment" -->
+6. **2.5** ~ 4%     <!-- .element: class="fragment" -->
+7. **2.3** ~ 3%     <!-- .element: class="fragment" -->
+8. **2.1** ~ 2%     <!-- .element: class="fragment" -->
 
 ___
 
@@ -56,17 +56,17 @@ ___
 
 #### By device
 
-1. 88% on desktop
-2. 10% on mobile
-3. 2% on tablets
+1. 88% on desktop  <!-- .element: class="fragment" -->
+2. 10% on mobile   <!-- .element: class="fragment" -->
+3. 2% on tablets   <!-- .element: class="fragment" -->
 
 #### Operating systems
 
-1. 71% on Windows
-2. 12% on macOS
-3. 7% on iOS
-4. 5% on Linux
-5. 3% on Android
+1. 71% on Windows  <!-- .element: class="fragment" -->
+2. 12% on macOS    <!-- .element: class="fragment" -->
+3. 7% on iOS       <!-- .element: class="fragment" -->
+4. 5% on Linux     <!-- .element: class="fragment" -->
+5. 3% on Android   <!-- .element: class="fragment" -->
 
 ---
 
