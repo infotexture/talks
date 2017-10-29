@@ -1,10 +1,10 @@
-# DITA-OT<br/>Docs 
+# DITA-OT<br/>Docs
 
 ## Developments
 
-#### Roger W. Fienhold Sheen
+#### Roger W. Fienhold Sheen [@infotexture](https://twitter.com/infotexture)
 
----  
+---
 
 <i class="fa fa-sitemap fa-5x pull-right muted"></i>
 
@@ -20,12 +20,10 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 - [What's New?](#whats-new)
 - [Suggestions](#suggestions)
 - [How to Help](#how-to-help)
-- [How to Help](#how-to-help-1)
-- [Or…](#or%E2%80%A6)
 
 <!-- /MarkdownTOC -->
 
----  
+---
 
 ## Doing the Numbers
 
@@ -132,6 +130,8 @@ We welcome contributions to the DITA-OT documentation.
 
 ___
 
+<i class="fa fa-flag fa-5x pull-right muted"></i>
+
 ## How to Help
 
 ### Create an Issue
@@ -150,8 +150,6 @@ _or — even better…_
 
 <i class="fa fa-code fa-5x pull-right muted"></i>
 
-## How to Help
-
 ### Create a Pull Request
 
 If you know how to fix the issue yourself, that's great!  
@@ -169,7 +167,7 @@ Here's what to do:
 
 ___
 
-## Or…
+### Or…
 
 ![](assets/edit-this-page-button.png)
 
