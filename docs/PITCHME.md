@@ -160,6 +160,9 @@ Here's what to do:
 3. Make your changes on the new branch, and 
 4. [Send a pull request][21].
 
+[19]: https://help.github.com/articles/fork-a-repo/
+[20]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/
+[21]: https://help.github.com/articles/using-pull-requests/
 ___
 
 ## Or…
@@ -179,6 +182,4 @@ ___
 [13]: http://www.dita-ot.org/dev/extension-points/extension-points-by-plugin.html
 [14]: http://www.dita-ot.org/dev/user-guide/DITA-features-in-docs.html
 [15]: dev_ref/migrating-to-2.4.html
-[19]: https://help.github.com/articles/fork-a-repo/
-[20]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/
-[21]: https://help.github.com/articles/using-pull-requests/
+
