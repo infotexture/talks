@@ -21,7 +21,7 @@ This talk will outline the process, using the DITA-OT project website at dita-ot
 - [Default HTML5 output](#default-html5-output)
 - [DITA-OT project website](#dita-ot-project-website)
 - [Adding CSS & metadata](#adding-css--metadata)
-- [Adding menu & classes to page body](#adding-menu--classes-to-page-body)
+- [Adding menu & classes](#adding-menu--classes)
 - [Styling navigation](#styling-navigation)
 
 <!-- /MarkdownTOC -->
@@ -63,7 +63,7 @@ Customizing the `chapterHead` template mode:
 
 ---
 
-## Adding menu & classes to page body
+## Adding menu & classes
 
 Customizing the `chapterBody` template mode:
 
