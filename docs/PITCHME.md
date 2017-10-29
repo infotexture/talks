@@ -20,6 +20,7 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 - [What's New?](#whats-new)
 - [Suggestions](#suggestions)
 - [How to Help](#how-to-help)
+- [Or…](#or%E2%80%A6)
 
 <!-- /MarkdownTOC -->
 
@@ -159,7 +160,11 @@ Here's what to do:
 3. Make your changes on the new branch, and 
 4. [Send a pull request][21].
 
-> Or — if that all sounds too complicated — just click the **Edit this page** link.
+___
+
+## Or…
+
+![](../assets/edit-this-page-button.png)
 
 [3]: http://www.dita-ot.org/dev/user-guide/build-using-dita-properties-file.html
 [4]: http://www.dita-ot.org/dev/user-guide/build-migrating-ant-to-dita.html
