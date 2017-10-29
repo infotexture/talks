@@ -20,6 +20,7 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 - [What's New?](#whats-new)
 - [Suggestions](#suggestions)
 - [How to Help](#how-to-help)
+- [How to Help](#how-to-help-1)
 - [Or…](#or%E2%80%A6)
 
 <!-- /MarkdownTOC -->
@@ -38,7 +39,7 @@ Active users since DITA-OT Day last year:
 * ~ 846 Weekly   <!-- .element: class="fragment" -->
 * ~ 54 Daily     <!-- .element: class="fragment" -->
 
-___ 
+___
 
 ### Content version demand
 
@@ -73,7 +74,7 @@ ___
 
 ## What's New?
 
-___  
+___
 
 ### Recent Enhancements
 
@@ -90,7 +91,7 @@ ___
 [1]: http://www.dita-ot.org/dev/
 [2]: https://github.com/dita-ot/docs/ 
 
-___  
+___
 
 <i class="fa fa-book fa-5x pull-right muted"></i>
 
@@ -102,7 +103,7 @@ New _Developer Reference_ topics:
 * [Experimental map-first preprocessing](http://www.dita-ot.org/dev/dev_ref/map-first-preprocessing.html)
 * [Migrating to release 2.5](http://www.dita-ot.org/dev/dev_ref/migrating-to-2.5.html)
 
-___  
+___
 
 <i class="fa fa-book fa-5x pull-right muted"></i>
 
@@ -116,8 +117,7 @@ ___
 * New topic on Lightweight DITA       <!-- .element: class="fragment" -->
 * New topic on normalized DITA output <!-- .element: class="fragment" -->
 
-
----  
+---
 
 <i class="fa fa-comments fa-5x pull-right muted"></i>
 
@@ -129,7 +129,10 @@ We welcome contributions to the DITA-OT documentation.
 2. If you'd like to help, review the [Contribution Guidelines][16].
 
 [16]: https://github.com/dita-ot/docs/blob/develop/CONTRIBUTING.md
-___  
+
+___
+
+## How to Help
 
 ### Create an Issue
 
@@ -143,7 +146,7 @@ _or — even better…_
 [18]: https://github.com/dita-ot/docs/issues
 [17]: https://github.com/dita-ot/docs/issues/new
 
----  
+---
 
 <i class="fa fa-code fa-5x pull-right muted"></i>
 
@@ -156,13 +159,14 @@ If you know how to fix the issue yourself, that's great!
 Here's what to do:
 
 1. [Fork the repository][19],
-2. [Create a new branch][20], 
-3. Make your changes on the new branch, and 
+2. [Create a new branch][20],
+3. Make your changes on the new branch, and
 4. [Send a pull request][21].
 
 [19]: https://help.github.com/articles/fork-a-repo/
 [20]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/
 [21]: https://help.github.com/articles/using-pull-requests/
+
 ___
 
 ## Or…
@@ -182,4 +186,3 @@ ___
 [13]: http://www.dita-ot.org/dev/extension-points/extension-points-by-plugin.html
 [14]: http://www.dita-ot.org/dev/user-guide/DITA-features-in-docs.html
 [15]: dev_ref/migrating-to-2.4.html
-
