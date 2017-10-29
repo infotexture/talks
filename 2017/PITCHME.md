@@ -16,6 +16,7 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 
 <!-- MarkdownTOC autolink="true" bracket="round" depth="1" -->
 
+- [Doing the Numbers](#doing-the-numbers)
 - [What's New?](#whats-new)
 - [Suggestions](#suggestions)
 - [How to Help](#how-to-help)
@@ -23,6 +24,18 @@ This talk provides an overview of DITA-OT documentation usage metrics and highli
 <!-- /MarkdownTOC -->
 
 ---  
+
+## Doing the Numbers
+
+Recent usage metrics
+
+* Top 10 pages by title
+* Content drilldown by version
+* Home page charts: sessions by country, device, 123 DAU, 800 WAU, 3K MAU
+* Last year's Christmas bump
+
+---
+
 
 ## What's New?
 
@@ -63,16 +76,13 @@ ___
 
 ### Three? Oh!
 
+* New top-level structure             <!-- .element: class="fragment" -->
+    - _Installing, Building, Customizing_  <!-- .element: class="fragment" -->
 * New topics on Markdown plug-in      <!-- .element: class="fragment" -->
     - Using Markdown topics as input  <!-- .element: class="fragment" -->
     - Generating Markdown output      <!-- .element: class="fragment" -->
-    - Publishing via GitBook          <!-- .element: class="fragment" -->
-* New topic on generating normalized DITA output <!-- .element: class="fragment" -->
-* New top-level structure             <!-- .element: class="fragment" -->
-    * _Installing_                    <!-- .element: class="fragment" -->
-    * _Building/Publishing_           <!-- .element: class="fragment" -->
-    * _Customizing/Extending/Plugins_ <!-- .element: class="fragment" -->
-    * _Troubleshooting_               <!-- .element: class="fragment" -->
+* New topic on Lightweight DITA       <!-- .element: class="fragment" -->
+* New topic on normalized DITA output <!-- .element: class="fragment" -->
 
 ---  
 
