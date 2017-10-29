@@ -167,7 +167,7 @@ ___
 
 ## Or…
 
-![](../assets/edit-this-page-button.png)
+![](assets/edit-this-page-button.png)
 
 [3]: http://www.dita-ot.org/dev/user-guide/build-using-dita-properties-file.html
 [4]: http://www.dita-ot.org/dev/user-guide/build-migrating-ant-to-dita.html
