@@ -1,8 +1,8 @@
 # Marking Down DITA
 
-### _Lightweight authoring & publishing with Markdown & DITA Open Toolkit_
+### _Lightweight authoring & publishing w/ Markdown & DITA Open Toolkit_
 
-#### Roger W. Fienhold Sheen
+#### Roger Fienhold Sheen [@infotexture](https://twitter.com/infotexture)
 
 ---
 
@@ -47,11 +47,12 @@ ___
 
 ### Mobile Authoring & Lightweight Content
 
-* The rise of mobile devices sparked renewed interest in lightweight content formats and ease of use as authors began looking for ways to take their writing _(and their tools)_ with them on the go.
-
-* Authors can capture notes with a smartphone on the go, flush out the draft back at their desk, and proofread the final result on a tablet later without copying-and-pasting or converting to other file formats along the way. 
-
-Since writing in Markdown encourages authors to focus on structure rather than presentation, it’s a good match for structured authoring scenarios in which  minimal markup is sufficient. 
+* Mobile devices drive interest in lightweight content
+* Authors want to take their writing _(and tools)_ on the go.
+  - Capture notes with a smartphone on the go
+  - Flush out the draft back at the desk
+  - Proofread the final result on a tablet later 
+* Since writing in Markdown encourages focus on structure rather than presentation, it’s a good match for authoring scenarios where  minimal markup suffices. 
 
 ___
 
@@ -88,7 +89,7 @@ Jarno Elovirta’s [DITA-OT Markdown][11] plugin extends the toolkit so you can 
 
 Install it in DITA-OT 2.2 – 2.5 with the `dita` command:
 
-    dita -install https://github.com/jelovirt/dita-ot-markdown/releases/ ↩
+    dita --install https://github.com/jelovirt/dita-ot-markdown/releases/ ↩
       download/1.3.0/com.elovirta.dita.markdown_1.3.0.zip
 
 [11]:   https://github.com/jelovirt/dita-ot-markdown
@@ -190,7 +191,7 @@ ___
 
 ### DITA-Specific Extensions
 
-Where necessary, _Markdown DITA_ establishes a few conventions of its own to support additional DITA features:
+Where necessary, _Markdown DITA_ establishes new conventions to support additional DITA features:
 
 * Specify the information type of the generated DITA topic with a header attribute like `{.task}`
 * Generate `<section>` and `<example>` elements with the `{.section}` and `{.example}` attributes.
@@ -202,6 +203,16 @@ The plugin’s [syntax reference][24] provides an overview of the supported cons
 ---
 
 ### _But that was all available<br/>two years ago…_
+
+___
+
+### _… so what’s new?_
+
+___
+
+### It’s built in.
+
+### DITA Open Toolkit 3.0 <!-- .element: class="fragment" -->
 
 ---
 
@@ -221,6 +232,19 @@ _(coming soon to a toolkit near you…)_
 * Makes it easier to contribute to DITA publications
 * Facilitates review processes with less technical audiences 
 * Feed DITA into Markdown-based publishing systems 
+
+___
+
+### Publishing via GitBook
+
+    .
+    ├── index.md
+    ├── SUMMARY.md
+    ├── dev_ref
+    ├── getting-started
+    ├── parameters
+    ├── release-notes
+    └── user-guide
 
 ---
 
