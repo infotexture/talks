@@ -359,7 +359,7 @@ Rendered result: [infotexture.github.io/ot-docs-markdown](http://infotexture.git
 ---
 
 ![][image-2]
-[image-2]:  ../assets/markdown-dita_800.png
+[image-2]:  assets/markdown-dita_800.png
 
 ---
 
