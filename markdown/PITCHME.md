@@ -1,10 +1,10 @@
 # Marking Down DITA
 
-### _Lightweight authoring & publishing w/ Markdown & DITA Open Toolkit_
+### _Lightweight authoring & publishing <small>with</small> Markdown & DITA Open Toolkit_
 
 #### Roger Fienhold Sheen [@infotexture](https://twitter.com/infotexture)
 
----
+___
 
 <i class="fa fa-sitemap fa-4x pull-right muted"></i>
 
@@ -20,14 +20,14 @@ This makes it easier for people to contribute content to DITA publications, enab
 
 - [Markdown – Web Writing Simplified](#markdown-%E2%80%93-web-writing-simplified)
 - [Using Markdown with DITA Open Toolkit](#using-markdown-with-dita-open-toolkit)
-- [What aboutLightweight DITA?](#what-aboutlightweight-dita)
+- [What about Lightweight DITA?](#what-about-lightweight-dita)
 - [Benefits & Use Cases](#benefits--use-cases)
 
 <!-- /MarkdownTOC -->
 
 ---
 
-## Markdown – <br/>Web Writing Simplified
+## Markdown – <br>Web Writing Simplified
 
 1. a plain text formatting syntax; _and_ 
 2. software … that converts the plain text … to HTML
@@ -48,11 +48,12 @@ ___
 ### Mobile Authoring & Lightweight Content
 
 * Mobile devices drive interest in lightweight content
-* Authors want to take their writing _(and tools)_ on the go.
-  - Capture notes with a smartphone on the go
-  - Flush out the draft back at the desk
-  - Proofread the final result on a tablet later 
-* Since writing in Markdown encourages focus on structure rather than presentation, it’s a good match for authoring scenarios where  minimal markup suffices. 
+* Authors want to take their writing _(and tools)_ on the go
+  - _Capture notes with a smartphone on the go_
+  - _Flesh out the draft back at the desk_
+  - _Proofread the final result on a tablet later_ 
+* Markdown helps focus on structure over presentation 
+* Good for scenarios where minimal markup suffices
 
 ___
 
@@ -125,10 +126,11 @@ The plugin not only _reads_ Markdown, it also provides new output formats to con
 * The original Markdown syntax supports basic HTML
 * A variety of extensions support additional applications
   - [MultiMarkdown][15], or _MMD_  
-      _(tables, footnotes, and citations)_
-  - [Github Flavored Markdown][16], or _GFM_, 
-      _(strikethrough, fenced code blocks and syntax highlighting)_
-  - [CommonMark][17] provides least-common-denominator syntax that should work well everywhere
+      _(tables, footnotes & citations)_
+  - [Github Flavored Markdown][16], or _GFM_  
+      _(strikethrough, fenced code blocks & syntax highlighting)_
+  - [CommonMark][17] provides reliable shared syntax that should work well everywhere
+  - _and many more…_
 
 [15]: http://fletcherpenney.net/multimarkdown/
 [16]: https://help.github.com/articles/github-flavored-markdown/
@@ -177,9 +179,9 @@ ___
 <i class="fa fa-plus-sign-alt icon-4x pull-left muted"></i>
 
 * Tables use the [MultiMarkdown][20] table extension format
-* Pandoc’s [header attributes][21] can be used to define `id` or `outputclass` attributes
+* Pandoc’s [header attributes][21] can be used to define `@id` or `@outputclass` attributes
 
-So `# Topic title { #carrot .juice}` becomes:
+So `# Topic title {#carrot .juice}` becomes:
 
     <topic id="carrot" outputclass="juice">
       <title>Topic title</title>
@@ -216,11 +218,44 @@ ___
 
 ---
 
-## What about<br/>Lightweight DITA?
+## What about <br>Lightweight DITA?
 
 ___
 
-_(coming soon to a toolkit near you…)_
+### New Authoring Formats
+
+<i class="fa fa-binoculars fa-4x pull-right muted"></i>
+
+**DITA Open Toolkit** Release 3.0 provides preview support for the _MDITA_ and _HDITA_ authoring formats planned for LwDITA.
+
+These new formats have been proposed<sup>*</sup> as alternative representations of DITA content in Markdown or HTML.
+
+> <sup>*</sup> [Lightweight DITA Committee Note](http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.pdf) _(coming soon…)_
+
+___
+
+### MDITA
+
+**Lightweight DITA authoring format based on Markdown.**
+
+Recent proposals include two profiles for MDITA:
+
+* _“Core profile”_ — based on GitHub Flavored Markdown and includes elements that are common to many other Markdown implementations.
+* _“Extended profile”_ — borrows features from other flavors of Markdown to represent a broader range of DITA content with existing plain-text syntax conventions.
+
+___
+
+### So what’s the difference? 
+
+The Markdown DITA parser included in the `org.lwdita` plug-in provides preliminary support for LwDITA profiles — _**and** additional Markdown constructs_.
+
+Set `@format` to `mdita` for LwDITA-specific processing:
+
+    <map>
+      <topicref href="mdita-topic.md" format="mdita"/>
+    </map>
+
+Note: MDITA parsing is stricter than the more lenient document parsing approach that is applied to markdown documents.
 
 ---
 
@@ -228,14 +263,87 @@ _(coming soon to a toolkit near you…)_
 
 <i class="fa fa-lightbulb fa-4x pull-right muted"></i>
 
-* Markdown becomes a first-class citizen 
+* Markdown becomes a first-class citizen
 * Makes it easier to contribute to DITA publications
-* Facilitates review processes with less technical audiences 
-* Feed DITA into Markdown-based publishing systems 
+* Facilitates review processes with less technical audiences
+* Feed DITA into Markdown-based publishing systems
 
 ___
 
-### Publishing via GitBook
+### Workflow Considerations
+
+___
+
+### №1
+
+#### Avoid roundtripping. <!-- .element: class="fragment" -->
+
+#### Seriously. <!-- .element: class="fragment" -->
+
+#### _unless you like data loss…_ <!-- .element: class="fragment" -->
+
+---
+
+### №2
+
+#### Simpler content stays in Markdown. <!-- .element: class="fragment" -->
+
+Simple content authored collaboratively over multiple versions is kept in Markdown, extended with Markdown DITA conventions and combined as necessary with more complex content maintained in DITA XML. <!-- .element: class="fragment" -->
+
+___
+
+### Maintain simple content in Markdown & publish with DITA
+
+1. Create topic content in Markdown
+2. Add topic reference to ditamap: `@format="markdown"`
+3. Include DITA XML topics with complex content
+3. Publish DITA map to multiple output formats
+
+---
+
+### №3
+
+#### Convert complex content to DITA & keep it there. <!-- .element: class="fragment" -->
+
+One-off contributions use Markdown as raw material and are subsequently enriched with conditional processing attributes, conkeyrefs or other more complex semantics. <!-- .element: class="fragment" -->
+
+___
+
+### Draft topics in Markdown for conversion to DITA
+
+1. Draft topic content in Markdown
+2. Add topic reference to ditamap: `@format="markdown"`
+3. Publish normalized DITA output: `--format=dita`
+4. Save generated DITA topic
+5. Enrich topic with DITA constructs
+6. Maintain & publish subsequent revisions in DITA
+
+---
+
+### Publishing DITA content with Markdown-based toolchains
+
+1. Create simple topics in Markdown
+2. Combine with complex DITA content in maps
+3. Publish DITA map to Markdown-based formats:
+    + `--format=markdown`
+    + `--format=markdown_github`
+    + `--format=markdown_gitbook`
+4. Mix in additional Markdown content
+5. Publish via GitBook, Leanpub, etc.
+
+___
+
+### Sample [GitBook][9] output
+
+[<img src="assets/ot-docs-markdown-gitbook_800.png" width="666" title="infotexture.github.io/ot-docs-markdown"/>](http://infotexture.github.io/ot-docs-markdown)
+
+[9]: https://www.gitbook.com
+
+___
+
+### GitBook Output Structure
+
+Sample output: [github.com/infotexture/ot-docs-markdown](https://github.com/infotexture/ot-docs-markdown)
 
     .
     ├── index.md
@@ -246,28 +354,21 @@ ___
     ├── release-notes
     └── user-guide
 
+Rendered result: [infotexture.github.io/ot-docs-markdown](http://infotexture.github.io/ot-docs-markdown)
+
 ---
 
-### Workflow Considerations
-
-1. **Avoid roundtripping.**
-2. **Simpler content stays Markdown.**  
-    Simple content authored collaboratively over multiple versions is kept in Markdown, extended with _Markdown DITA_ conventions and combined as necessary with more complex content maintained in DITA XML.
-3. **Convert complex content to DITA & keep it there.**  
-    One-off contributions use Markdown as raw material and enriched with conditional processing attributes, conkeyrefs or other more complex semantics.
+![][image-2]
+[image-2]:  ../assets/markdown-dita_800.png
 
 ---
 
 ### Resources
 
-* <http://daringfireball.net/projects/markdown/>
-* <https://github.com/jelovirt/dita-ot-markdown/>
-* <http://infotexture.net/2015/04/dita-ot-markdown-plugin/>
+* [github.com/jelovirt/org.lwdita](https://github.com/jelovirt/org.lwdita) _(new in DITA-OT 3.0)_
+* [infotexture.net/2015/04/dita-ot-markdown-plugin](http://infotexture.net/2015/04/dita-ot-markdown-plugin/)
+* [github.com/jelovirt/dita-ot-markdown](https://github.com/jelovirt/dita-ot-markdown/) _(deprecated)_
+* [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/)
+* [commonmark.org](http://commonmark.org/)
 
 ⁂
-
-<!-- 
-![][image-1]
-
-[image-1]:  file:///Users/rofish/Documents/Work/Websites/graphics/markdown-dita_800.png
- -->
