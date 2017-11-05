@@ -335,7 +335,7 @@ ___
 
 ### Sample [GitBook][9] output
 
-[<img src="assets/ot-docs-markdown-gitbook_800.png" width="666" title="infotexture.github.io/ot-docs-markdown"/>](http://infotexture.github.io/ot-docs-markdown)
+[<img src="https://raw.githubusercontent.com/infotexture/talks/dita-europe/assets/ot-docs-markdown-gitbook_800.png" width="666" title="infotexture.github.io/ot-docs-markdown"/>](http://infotexture.github.io/ot-docs-markdown)
 
 [9]: https://www.gitbook.com
 
@@ -359,7 +359,7 @@ Rendered result: [infotexture.github.io/ot-docs-markdown](http://infotexture.git
 ---
 
 ![][image-2]
-[image-2]:  assets/markdown-dita_800.png
+[image-2]:  https://raw.githubusercontent.com/infotexture/talks/dita-europe/assets/markdown-dita_800.png
 
 ---
 
