@@ -5,4 +5,4 @@ theme-override : https://raw.githubusercontent.com/infotexture/reveal.js/custom/
 logo : https://cdn.rawgit.com/infotexture/gitpitch-test/36567f684e632efacbf9cac67fbdd67427fcccf6/assets/infotexture-wordmark-blue-24.svg
 
 footnote : "<a style='text-decoration:none; color: #AAA;' href='#/2'>DITA-OT Day · Berlin · October 29, 2017 © infotexture</a>"
-highlight : atom-one-light
+highlight : github
