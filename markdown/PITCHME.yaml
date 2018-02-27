@@ -2,7 +2,7 @@ horz-delim : ---
 vert-delim : ___
 
 theme-override : https://raw.githubusercontent.com/infotexture/reveal.js/custom/css/theme/infotexture.css
-logo : https://cdn.rawgit.com/infotexture/gitpitch-test/36567f684e632efacbf9cac67fbdd67427fcccf6/assets/infotexture-wordmark-blue-24.svg
+logo : https://raw.githubusercontent.com/infotexture/talks/develop/assets/infotexture-wordmark-blue-24.svg
 
 footnote : "<a style='text-decoration:none; color: #AAA;' href='#/1'>DITA Europe · Berlin · October 31, 2017 © infotexture</a>"
 highlight : github
